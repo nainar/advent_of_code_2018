@@ -1,0 +1,25 @@
+<html>
+  <head>
+      <script src="day1.js"></script>
+      <script src="day2.js"></script>
+      <script src="day3.js"></script>
+  </head>
+  <body>
+    <input type="file" name="file" id="fileInput">
+    <br/>
+    <button onclick="showAnswer(3)">Compute day 3 answer</button>
+    <br/>
+    <button onclick="showAnswer(2)">Compute day 2 answer</button>
+    <br/>
+    <button onclick="showAnswer(1)">Compute day 1 answer</button>
+    <br/>
+  </body>
+</html>
+
+<script>
+  function showAnswer(day) {
+    const file = fileInput.files[0];
+    window['day' + day + '_a'](file);
+    window['day' + day + '_b'](file);
+  }
+</script>
